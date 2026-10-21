@@ -1,0 +1,16 @@
+{
+  "id": "dsh-external/dsh-personal-studio",
+  "version": "0.1.0",
+  "main": "./lib/index.js",
+  "description": "个人工作台 —— 待办 / 笔记 / 书签 / 会话统计 / 服务器状态，收在 DSH 右侧栏一列里",
+  "engines": {
+    "dsh": ">=0.2.0-rc.2"
+  },
+  "contributes": {
+    "tools": [],
+    "skills": []
+  },
+  "client": {
+    "main": "./lib/client.js"
+  }
+}

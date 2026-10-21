@@ -1,0 +1,9 @@
+# `autoInstallPeers: false` mirrors the DSH profile layout: the host supplies the
+# peer packages (cordis, react, the DSH client modules) at runtime, so pnpm must
+# not drag its own copies in — a second instance of a peer is exactly what the
+# DSH dependency preflight refuses. Everything this repo needs to typecheck and
+# build is an explicit devDependency below.
+packages:
+  - '.'
+
+autoInstallPeers: false

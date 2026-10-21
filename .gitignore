@@ -1,0 +1,30 @@
+# Build output
+lib/
+*.tgz
+*.tsbuildinfo
+
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Local scratch
+.acl-recovery/
+*.log
+.DS_Store
+Thumbs.db
+
+# Internal design docs (ADRs / design tree) — kept locally, not published
+docs/
+
+# Editor / IDE
+.vscode/
+.idea/
+
+# Local env & overrides (never publish)
+.env
+.env.*
+!.env.example
+*.local
+
+# Scratch files used during upstream contract probing
+.tmp-*

@@ -1,0 +1,156 @@
+/**
+ * The workbench's styles.
+ *
+ * Every colour is a `--dsw-*` token, so the panel re-themes with the host's
+ * skin centre and no per-skin work is needed. The one rule that is not
+ * negotiable: the panel surface reads `--dsw-alias-bg-layer-1` and NEVER
+ * `--dsw-specific-sidebar-fill` — that token belongs to the host's own left
+ * navigation, and a skin that overrides it would repaint the workbench with
+ * the navigation's surface.
+ */
+.root {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  height: 100%;
+  min-height: 0;
+  background: var(--dsw-alias-bg-layer-1);
+  color: var(--dsw-alias-label-primary);
+  font: var(--dsw-font-xxs-12);
+}
+
+.bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: none;
+  padding: 8px 10px;
+  border-bottom: 1px solid var(--dsw-alias-bg-layer-3);
+}
+
+.body {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  padding: 10px;
+}
+
+.empty {
+  padding: 24px 12px;
+  text-align: center;
+  color: var(--dsw-alias-label-secondary);
+}
+
+.error {
+  margin: 8px 10px;
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid var(--dsw-alias-state-error-primary);
+  color: var(--dsw-alias-state-error-primary);
+  background: var(--dsw-alias-bg-layer-3);
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 8px;
+  border-radius: 6px;
+  background: var(--dsw-alias-bg-layer-2);
+}
+
+.rowActive {
+  background: var(--dsw-alias-interactive-bg-active);
+}
+
+.rowTitle {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.done {
+  text-decoration: line-through;
+  color: var(--dsw-alias-label-secondary);
+}
+
+.muted {
+  color: var(--dsw-alias-label-secondary);
+}
+
+.mono {
+  font: var(--dsw-font-xxxs-strong-11);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+.metric {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+}
+
+.metricLabel {
+  color: var(--dsw-alias-label-secondary);
+}
+
+.metricValue {
+  font: var(--dsw-font-xxs-strong-12);
+}
+
+.meter {
+  height: 4px;
+  border-radius: 2px;
+  background: var(--dsw-alias-bg-layer-3);
+  overflow: hidden;
+}
+
+.meterFill {
+  height: 100%;
+  background: var(--dsw-alias-state-business-primary);
+}
+
+.meterWarn {
+  height: 100%;
+  background: var(--dsw-alias-state-warn-primary);
+}
+
+.meterDanger {
+  height: 100%;
+  background: var(--dsw-alias-state-error-primary);
+}
+
+.composer {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  flex: none;
+  padding: 8px 10px;
+  border-top: 1px solid var(--dsw-alias-bg-layer-3);
+}
+
+.grow {
+  flex: 1;
+  min-width: 0;
+}
+
+.treeNode {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.treeChildren {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-left: 14px;
+}
